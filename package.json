@@ -1,0 +1,19 @@
+{
+  "name": "project-blog-web-aplication",
+  "version": "1.0.0",
+  "description": "Making a Blog web aplication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "T.Huurnink",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "jsdom": "^27.4.0"
+  }
+}

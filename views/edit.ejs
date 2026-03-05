@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+<container class="web-page">
+    <div class="text-block" id="new-blog">
+        <h1 class="henny-penny-regular">Edit Post</h1>
+        <form id="new-post-container" action="/editpost" method="post">
+            <div class="text-content">  
+                <div  id="edit-blog-title">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" value="<%= title %>" required>
+                    
+                </div>
+                
+                <div>
+                    <textarea name="blog" placeholder="Your post..." required><%= post %></textarea>
+                </div>
+                    <button class="button-style">Edit</button>
+            </div>
+        </form>
+    </div>
+
+</container>
+<%- include("partials/footer.ejs") %>
