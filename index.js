@@ -91,11 +91,8 @@ app.post("/submit", (req, res) => {
 app.post("/delete", (req, res) => {
     allPosts = [];
     
-    res.render("index.ejs", {
-        links: true,
-        posts: allPosts,
-    })
-})
+    res.redirect("/home");
+});
 
 app.post("/delete-one", (req, res) => {
     const body = req.body;
@@ -104,10 +101,7 @@ app.post("/delete-one", (req, res) => {
     
     allPosts = allPosts.filter(post => post.title !== deletePostTitle);
 
-    res.render("index.ejs", {
-        links: true,
-        posts: allPosts,
-    })
+    res.redirect("/home");
 })
 
 app.post("/edit", (req, res) => {
@@ -135,10 +129,7 @@ app.post("/editpost", (req, res) => {
     // add the new version of the post
     allPosts.push(post);
 
-    res.render("index.ejs", {
-        links: true,
-        posts: allPosts,
-    });
+    res.redirect("/home");
 });
 
 app.listen(port, () => {
